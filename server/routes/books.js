@@ -34,6 +34,7 @@ router.get('/add', (req, res, next) => {
       genre: ''
     }
 });
+});
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
