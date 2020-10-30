@@ -26,22 +26,22 @@
             <!-- Template Row -->
             <% for (let count = 0; count < books.length; count++) { %>
             <tr>
-              <td><%= books[count].title %></td>
-              <td class="text-center">$<%= books[count].price %></td>
-              <td class="text-center"><%= books[count].author %></td>
-              <td class="text-center"><%= books[count].genre %></td>
+              <td><%= books[count].Title %></td>
+              <td class="text-center">$<%= books[count].Price %></td>
+              <td class="text-center"><%= books[count].Author %></td>
+              <td class="text-center"><%= books[count].Genre %></td>
               <td class="text-center">
                 <!-- ------------------------ -->
                 <!-- ADD the EDIT BUTTON HERE -->
                 <!-- ------------------------ -->
-                <a href="/books/<%= books[count]._id %>" class="btn btn-primary">
+                <a href="/books/details/<%= books[count]._id %>" class="btn btn-primary">
                   <i class="fas fa-pencil-alt"></i>Edit</a>
               </td>
               <td class="text-center">
                 <!-- ------------------------ -->
                 <!-- ADD the DELETE BUTTON HERE -->
                 <!-- ------------------------ -->
-                <form method="POST" action="/books/delete/<%= books[count]._id %>">
+                <form method="GET" action="/books/delete/<%= books[count]._id %>">
                   <i class="fas fa-pencil-alt"></i><button class="btn btn-primary" type="submit">Delete</button></form>
               </td>
             </tr>
